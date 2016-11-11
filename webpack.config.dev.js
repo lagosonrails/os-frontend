@@ -40,4 +40,4 @@ export default {
       {test: /\.(png|gif)$/, loader: 'url-loader?limit=8192'}
     ]
   }
-};
+}

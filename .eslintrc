@@ -22,7 +22,7 @@
     "mocha": true
   },
   "rules": {
-    "quotes": "quotes": [1, "single", { "avoidEscape": true }],,
+    "quotes": [1, "single", { "avoidEscape": true }],
     "no-console": 1,
     "no-debugger": 1,
     "no-var": 1,
