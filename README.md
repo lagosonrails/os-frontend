@@ -1,4 +1,5 @@
-<center><img href='http://lagosonrails.com/img/profile.png' /></center>
+![](http://lagosonrails.com/img/profile.png)
+
 * [LagosOnRails](http://lagosonrails.com/)
 * [Join our Slack](http://slack.lagosonrails.com) ([lagosonrails.slack.com](http://lagosonrails.slack.com))
 
