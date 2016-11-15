@@ -5,7 +5,7 @@
 
 # ATM Locator Client
 
-With all the technologies available to us right now, locating an ATM should not be hard... This is generally the case, unless you have been to some parts of the world, where ...
+With all the technologies available to us right now, locating an ATM should not be hard. This is generally the case, unless you have been to some parts of the world, where ...
 
 The ATM locator Client is part of the open-source initiatives of the Lagos On Rails Community, which aims to:
 * Provide an ease of access to ATMs around you
