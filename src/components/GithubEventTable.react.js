@@ -38,7 +38,7 @@ export default class GithubEventTable extends React.Component {
         <div className='column-wrapper'>
           <div className='row-wrapper-sb header'>
             <div className='first-column'>Id</div>
-            <div className='second-column'>Type</div>
+            <div className='second-column'>Event</div>
             <div className='third-column'>Repository</div>
             <div className='fourth-column'>Date</div>
           </div>
