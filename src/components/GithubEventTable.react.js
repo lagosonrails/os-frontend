@@ -1,5 +1,5 @@
 import React from 'react'
-import loader from '../assets/gears.gif'
+import loader from '../assets/default.gif'
 
 export default class GithubEventTable extends React.Component {
   constructor(props) {
@@ -17,6 +17,12 @@ export default class GithubEventTable extends React.Component {
       return (<img className='loader' src={loader} />)
   }
   eventBody() {
+    if (this.props.events.message)
+      return (
+        <h3 className='error-message'>
+          {this.props.events.message}
+        </h3>
+      )
     if (this.props.events.length > 0) {
       const row = this.props.events.map(event => {
         return (
@@ -57,8 +63,8 @@ export default class GithubEventTable extends React.Component {
             </div>
           </div>
           <button onClick={this.fetchEvents} className='btn btn-primary'>Fetch Events</button>
+          {this.loading()}
         </form>
-        {this.loading()}
         {this.eventBody()}
       </div>
     )

@@ -16,13 +16,15 @@ class GithubEvent extends React.Component {
     this.fetchEvents = this.fetchEvents.bind(this)
   }
   fetchEvents(value) {
+    this.clearError()
     if (value === '')
       return this.setState({error: 'Please enter a github username'})
     this.setState({processing: true})
-    this.props.actions.fetchGithubEvents(value).then(() => {
+    this.props.actions.fetchGithubEvents(value).always(() => {
       this.setState({processing: false})
     })
   }
+  clearError() { this.setState({error: ''})}
 
   render() {
     return(
