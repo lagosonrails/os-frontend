@@ -38,6 +38,16 @@ class GithubEvent extends React.Component {
   }
 }
 
+GithubEvent.propTypes = {
+  events: React.PropTypes.array.isRequired,
+  actions: React.PropTypes.object.isRequired
+}
+
+GithubEvent.defaultProps = {
+  events: [],
+  actions: {}
+}
+
 function mapStateToProps(state, ownProps) {
   return {
     events: state.githubEvents

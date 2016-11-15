@@ -37,9 +37,9 @@ export default class GithubEventTable extends React.Component {
       return (
         <div className='column-wrapper'>
           <div className='row-wrapper-sb header'>
-            <div className='first-column'>Event Id</div>
-            <div className='second-column'>Event Type</div>
-            <div className='third-column'>Repository Name</div>
+            <div className='first-column'>Id</div>
+            <div className='second-column'>Type</div>
+            <div className='third-column'>Repository</div>
             <div className='fourth-column'>Date</div>
           </div>
           {row}
@@ -69,4 +69,11 @@ export default class GithubEventTable extends React.Component {
       </div>
     )
   }
+}
+
+GithubEventTable.propTypes = {
+  processing: React.PropTypes.bool.isRequired,
+  error: React.PropTypes.string,
+  events: React.PropTypes.array.isRequired,
+  fetchEvents: React.PropTypes.func.isRequired
 }
