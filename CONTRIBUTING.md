@@ -61,6 +61,6 @@ Some things that will increase the chance that your pull request is accepted on 
 
 ### Follow the Coding Conventions
 
-This is a React-Redux application. We have added a `.eslintrc` file so that you can easily spot where you aren't following convention. Please try to pay attention to Eslint warnings and errors.
+This is a React-Redux application. We have added a `.eslintrc` file so that you can easily spot where you aren't following conventions. Please try to pay attention to Eslint warnings and errors.
 
 And in case we didn't emphasize it enough: we love tests!
