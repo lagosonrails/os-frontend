@@ -11,7 +11,6 @@ import 'babel-polyfill'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 const store = configureStore()
-store.dispatch(fetchGithubEvents)
 
 render (
   <Provider store={store}>
