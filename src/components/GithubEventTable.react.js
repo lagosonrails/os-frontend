@@ -59,7 +59,7 @@ export default class GithubEventTable extends React.Component {
           <div className={`form-group ${this.props.error ? 'has-error' : ''}`}>
             <div className='field'>
               <input className='form-control' ref='input' type='text' placeholder='Enter username' required/>
-              <p className='error pull-left'>{this.props.error}</p>
+              {this.props.error && <div className="alert alert-danger">{this.props.error}</div>}
             </div>
           </div>
           <button onClick={this.fetchEvents} className='btn btn-primary'>Fetch Events</button>
