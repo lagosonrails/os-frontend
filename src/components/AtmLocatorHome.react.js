@@ -5,7 +5,6 @@ import SearchBox from './SearchBox.react'
 
 import '../styles/atmLocator.styl'
 
-
 export default class AtmLocatorHome extends React.Component {
   constructor(props) {
     super(props)
