@@ -22,7 +22,7 @@ export default class AtmLocatorHome extends React.Component {
     if (navigator.geolocation)
         return navigator.geolocation.getCurrentPosition(this.showPosition)
 
-    toastr.error('Geolocation is not supported by this browser.')
+    toastr.error('Hey buddy, Geolocation is not supported by this browser.')
   }
   showPosition(position) {
     this.setState({coordinates: {lat: position.coords.latitude, lng: position.coords.longitude}})
