@@ -6,7 +6,7 @@ import GithubEventTable from './GithubEventTable.react'
 
 import '../styles/githubEvent.styl'
 
-class GithubEvent extends React.Component {
+export class GithubEvent extends React.Component {
   constructor(props, context) {
     super(props)
     this.state = {

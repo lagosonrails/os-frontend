@@ -2,6 +2,13 @@
 <html lang='en'>
   <head>
     <title>ATM Locator</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' media='screen' title='no title' charset='utf-8'>
+    <script>
+      function initMap() {
+        console.log('Google Maps API version: ' + google.maps.version);
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&v=3&key=AIzaSyCeVyVf5rS9hVsbhdJn3wwBYohwx8WHw_g&callback=initMap"></script>
   </head>
   <body>
     <div id='app'></div>
