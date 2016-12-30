@@ -8,6 +8,8 @@ const Header = () => {
     <nav className='nav-header'>
       <IndexLink to='/' activeClassName='active'>Home</IndexLink>
       {' | '}
+      <Link to='sample' activeClassName='active'>Sample App</Link>
+      {' | '}
       <Link to='about' activeClassName='active'>About</Link>
     </nav>
   )
