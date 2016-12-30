@@ -2,6 +2,7 @@ import React from 'react'
 import GoogleMap from 'google-map-react'
 import MyGreatPlace from './my_great_place'
 import SearchBox from './SearchBox.react'
+import toastr from 'toastr'
 
 import '../styles/atmLocator.styl'
 
@@ -10,7 +11,7 @@ export default class AtmLocatorHome extends React.Component {
     super(props)
 
     this.state = {
-      coordinates: {},
+      coordinates: {}
     }
     this.showPosition = this.showPosition.bind(this)
   }
@@ -18,17 +19,16 @@ export default class AtmLocatorHome extends React.Component {
     this.getLocation()
   }
   getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(this.showPosition)
-    } else {
-      console.log('Geolocation is not supported by this browser.');
-    }
+    if (navigator.geolocation)
+        return navigator.geolocation.getCurrentPosition(this.showPosition)
+
+    toastr.error('Geolocation is not supported by this browser.')
   }
   showPosition(position) {
     this.setState({coordinates: {lat: position.coords.latitude, lng: position.coords.longitude}})
   }
   searchByLocationOrBank(query){
-    console.log(query)
+    // TODO: implement search
   }
 
   render() {
@@ -44,9 +44,9 @@ export default class AtmLocatorHome extends React.Component {
           defaultCenter={this.state.coordinates}
           defaultZoom={this.props.zoom}
           bootstrapURLKeys={{
-            key: 'AIzaSyCeVyVf5rS9hVsbhdJn3wwBYohwx8WHw_g',
+            key: 'AIzaSyCeVyVf5rS9hVsbhdJn3wwBYohwx8WHw_g'
           }}>
-          <MyGreatPlace {...this.state.coordinates} marker={true} />
+          <MyGreatPlace {...this.state.coordinates} marker />
           <MyGreatPlace lat={6.5253793} lng={3.3799057} />
           <MyGreatPlace lat={6.5244793} lng={3.3796057} />
           <MyGreatPlace lat={6.5247793} lng={3.3797057} />
@@ -62,6 +62,17 @@ export default class AtmLocatorHome extends React.Component {
 }
 
 AtmLocatorHome.defaultProps = {
-  center: {lat: 59.938043, lng: 30.337157},
-  zoom: 18,
+  center: {
+    lat: 59.938043,
+    lng: 30.337157
+  },
+  zoom: 18
+}
+
+AtmLocatorHome.propTypes = {
+  center: React.PropTypes.shape({
+    lat: React.PropTypes.number,
+    lng: React.PropTypes.number
+  }),
+  zoom: React.PropTypes.number
 }
